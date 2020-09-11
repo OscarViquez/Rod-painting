@@ -1,0 +1,65 @@
+section__name
+
+section__title  section__title--about
+
+section__subtitle   section__subtitle--about
+
+section__paragraph  section__paragraph--about
+
+section__list   section__list--about
+
+section__card   section__card--about
+
+section__footer section__footer--about
+
+===================================================================
+
+BEM 2.0
+
+Main----------------
+wrapper main__wrapper
+
+title main__title
+
+main__card
+
+main__image
+
+list main__list
+
+items main__list--items
+
+
+about----------------
+wrapper about__wrapper
+
+title about__title
+
+subtitle about__subtitle
+
+list about__list
+
+items about__list--items
+
+
+price----------------
+wrapper price__wrapper
+
+title price__title
+
+subtitle price__subtitle
+
+
+work~----------------
+wrapper work__wrapper
+
+title work__title
+
+subtitle work__subtitle
+
+work__wrapper--list
+
+work__wrapper--items
+
+
+

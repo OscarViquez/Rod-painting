@@ -1,0 +1,228 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@400;700;900&family=Montserrat:wght@100;400;500;800;900&family=Raleway:wght@800&display=swap');
+
+
+:root {
+    --ff-primary   : 'Montserrat', sans-serif;
+    --ff--secondary: 'Chivo', sans-serif;
+    --ff-third: 'Raleway', sans-serif;
+
+    --fw-bold: 300;
+    --fw-reg : 800;
+
+    --clr-light : #F8F8EE;
+    --clr-white : #FFF;
+    --clr-light2: #c2cbd9;
+    --clr-light3: #a3b1c6;
+    --clr-accent: #da4d3a;
+    --clr-dark  : #181312;
+    --clr-green : #56884d;
+
+    --clr-background: rgb(214, 208, 208);
+
+    --fs-h1  : 3rem;
+    --fs-h2  : 2.25rem;
+    --fs-h3  : 1.75rem;
+    --fs-h4  : 1.25rem;
+    --fs-body: 1rem;
+
+    --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, .25),
+        0.125em 0.125em 0.25em rgba(0, 0, 0, .15);
+}
+
+@media (min-width: 900px) {
+    :root {
+        --fs-h1  : 4.5rem;
+        --fs-h2  : 3.75rem;
+        --fs-h3  : 1.5rem;
+        --fs-body: 1.125rem;
+    }
+}
+
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+body {
+    background : var(--clr-background);
+    font-family: var(--ff-primary);
+    font-size  : var(--fs-body);
+    line-height: 1.6;
+    margin     : 0 15rem 0 15rem;
+
+}
+
+section {
+    padding: 5em 2em;
+}
+
+img {
+    display  : block;
+    max-width: 100%;
+}
+
+strong {
+    font-weight: var(--fw-bold)
+}
+
+:focus {
+    outline       : 3px solid var(--clr-accent);
+    outline-offset: 3px;
+}
+
+/* Typography ------------------------------------------- */
+
+ul {
+    list-style-type: none;
+}
+
+h1 {
+    margin: 2rem;
+}
+
+p {
+    font-family: var(--ff-third);
+    font-size: var(--fs-h3);
+}
+
+.logo__title {
+
+    background: linear-gradient(to right, #ed5034 0%, #ed5034 33%, #ffc861 33%, #ffc861 66%, #5987dd 66%, #5987dd 100%);
+}
+
+.title {
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-reg);
+    font-size  : var(--fs-h1);
+}
+
+
+
+/* Responive CSS ---------------------------------------- */
+.grid {
+
+    margin-top: 10rem;
+    display   : grid;
+
+    grid-template-rows   : 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas  :
+        "logo logo logo"
+        "main main main"
+        "photo photo photo"
+        "photo photo photo";
+}
+
+/* Responive CSS / Logo Section ---------------------------------------- */
+.logo {
+    grid-area    : logo;
+    display      : flex;
+    flex-flow    : column wrap;
+    flex-wrap    : wrap;
+    align-content: center;
+
+    padding: 1rem;
+}
+
+
+.logo__border {
+    padding      : 1rem;
+    border-style : outset;
+    border-color : var(--clr-white);
+    border-width : .5px .5px 3px 2px;
+    border-radius: 10px;
+
+    background-color: var(--clr-white);
+    box-shadow      :
+        12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+        -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+}
+
+.logo__buttons {
+    display       : flex;
+    flex-direction: column;
+    font-size: var(--fs-h3);
+}
+
+.logo__item {
+    margin-bottom: 1rem;
+
+
+    border         : none;
+    color          : black;
+    padding        : 15px 32px;
+    text-align     : center;
+    text-decoration: none;
+    display        : inline-block;
+
+    background-color: var(--clr-white);
+    box-shadow      :
+        12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+        -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+
+
+}
+
+
+/* Responive CSS / About Section ---------------------------------------- */
+.about {
+    grid-area: main;
+
+}
+
+.about__paragraph {
+    padding      : 1rem;
+    border-style : outset;
+    border-color : var(--clr-white);
+    border-width : .5px .5px 3px 2px;
+    border-radius: 10px;
+
+    background-color: var(--clr-white);
+    box-shadow      :
+        12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+        -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+}
+
+
+/* Responive CSS / Work Section ---------------------------------------- */
+.work {
+    grid-area: photo;
+}
+
+.work__photos {
+    padding        : 1rem;
+    display        : flex;
+    flex-flow      : row wrap;
+    justify-content: space-between;
+    border-style   : outset;
+    border-color   : white;
+    border-width   : .5px .5px 5px 3px;
+    border-radius  : 10px;
+
+    background-color: var(--clr-white);
+    box-shadow      :
+        12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+        -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+}
+
+.work__photos--content {
+    margin       : 1rem;
+    margin-bottom: 4rem;
+
+}
+
+.work__paragraph {
+    padding: 3rem;
+    background-color: var(--clr-white);
+    box-shadow      :
+        12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+        -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+}
