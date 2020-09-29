@@ -1,0 +1,339 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@400;700;900&family=Montserrat:wght@100;400;500;800;900&family=Raleway:wght@800&display=swap");
+:root {
+  --ff-primary: "Montserrat", sans-serif;
+  --ff--secondary: "Chivo", sans-serif;
+  --ff-third: "Raleway", sans-serif;
+  --fw-reg: 300;
+  --fw-med: 500;
+  --fw-bold: 800;
+  --clr-light: #fff;
+  --clr-white: #fff;
+  --clr-light2: #c2cbd9;
+  --clr-light3: #a3b1c6;
+  --clr-red: #ff6b58;
+  --clr-dark: #181312;
+  --clr-green: #56884d;
+  --clr-background: #f8f8ee;
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.75rem;
+  --fs-p: 2.1rem;
+  --fs-h4: 1.25rem;
+  --fs-body: 1rem;
+  --bs: 1em 1em 0em rgba(0, 0, 0, 0.25),
+    0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+}
+
+/* Font sizes for large screens */
+
+        @media (min-width: 900px) {
+        :root {
+            --fs-h1: 2.25rem;
+            --fs-ul: 1.75rem;
+            --fs-h3: 1.5rem;
+            --fs-body: 1.125rem;
+        }
+        }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #F3F3F3;
+  font-family: var(--ff-primary);
+  line-height: 1.6;
+  /* margin: 0 5rem 0 5rem; */
+}
+
+section {
+  padding: 5em 2em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  max-height: 50%;
+}
+
+.title {
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-h1);
+  margin: 2rem;
+}
+
+p {
+  font-family: var(--ff-third);
+  font-size: var(--fs-h1);
+}
+
+ul {
+  list-style-type: none;
+  font-size: var(--fs-ul);
+}
+
+:focus {
+  outline: 3px solid var(--clr-accent);
+  outline-offset: 3px;
+}
+
+/* Animations */
+
+@keyframes slideInFromLeft {
+  0% {
+      transform: translateX(-50%);
+  }
+  100% {
+      transform: translateX(0);
+  }
+}
+
+/* buttons */
+
+#information {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  margin: 4px 2px;
+
+  /* Animation for hover effect */
+  transition-duration: 1s;
+  cursor: pointer;
+
+  /* Animation after page loads */
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+
+  box-shadow: var(--bs);
+}
+
+#phone {
+  background-color: #4c87af;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  margin: 4px 2px;
+
+  /* Animation for hover effect */
+  transition-duration: 1s;
+  cursor: pointer;
+  
+  /* Animation after page loads */
+  animation: 2s ease-out 0s 1 slideInFromLeft;
+
+  box-shadow: var(--bs);
+}
+
+#email {
+  background-color: var(--clr-red);
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  margin: 4px 2px;
+
+  /* Animation for hover effect */
+  transition-duration: 1s;
+  cursor: pointer;
+  
+  /* Animation after page loads */
+  animation: 1.5s ease-out 0s 1 slideInFromLeft;
+
+  box-shadow: var(--bs);
+}
+/* hover buttons */
+#information:hover {
+  background-color: #b6dfb7;
+  color: black;
+}
+
+#phone:hover {
+  background-color: #bfe6ff;
+  color: black;
+}
+
+#email:hover {
+  background-color: #ffc9c2;
+  color: black;
+}
+/* ======== SlideShow ======================================================================================= */
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 750px;
+  position: relative;
+  margin: auto;
+}
+
+.slide-img {
+    margin-left: 4.5rem;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 1s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 5s;
+  animation-name: fade;
+  animation-duration: 5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* ======= Reponsive Web design =========================================================================================== */
+.grid {
+    display: grid;
+    margin: 2rem 4rem 0rem 6rem;
+    grid-template-rows: 1fr 0.1fr;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-areas:
+      "logo logo logo"
+      "main photo photo";
+  }
+  
+  .logo {
+    margin-bottom: 15rem;
+
+    grid-area: logo;
+    display: grid;
+    /* margin: 2rem 4rem 0rem 6rem; */
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "image btn";
+  }
+
+        #logo__image {
+            grid-area: image;
+            margin: 6rem;
+
+            /* Animation after page loads */
+            animation: .5s ease-out 0s 1 slideInFromLeft;
+            
+        }
+        .logo__buttons {
+            grid-area: btn;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-between;
+        }
+
+  .about {
+      grid-area: main;
+      
+  }
+        .about__content {
+            background:var(--clr-light);
+            box-shadow: var(--bs);
+            padding: 4rem;
+
+            /* Animation after page loads */
+            animation: 1s ease-out 0s 1 slideInFromLeft;
+        }
+
+  .work {
+      grid-area: photo;
+  }
+        .work__content {
+            background:var(--clr-light);
+            box-shadow: var(--bs);
+
+            /* Animation after page loads */
+            animation: 1.5s ease-out 0s 1 slideInFromLeft;
+            
+        }
