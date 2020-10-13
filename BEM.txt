@@ -1,4 +1,4 @@
-section__name
+section
 
 section__title  section__title--about
 
